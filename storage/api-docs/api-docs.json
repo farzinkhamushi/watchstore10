@@ -1,0 +1,332 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Watchstore10 api list",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api": {},
+        "/api/v1/send_sms": {
+            "post": {
+                "tags": [
+                    "Auth Api"
+                ],
+                "description": "use for send verification sms to user",
+                "operationId": "d66c863c38e88d858c0ed44f85519d62",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "mobile": {
+                                        "description": "Enter mobile number",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/verify_sms_code": {
+            "post": {
+                "tags": [
+                    "Auth Api"
+                ],
+                "description": "use for send verification sms to user",
+                "operationId": "e5905d20c2f34f98c4a5c597eefbd455",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "mobile": {
+                                        "description": "User mobile number",
+                                        "type": "string"
+                                    },
+                                    "code": {
+                                        "description": "Recieved sms code",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/home": {
+            "get": {
+                "tags": [
+                    "Home Page"
+                ],
+                "description": "get home page data",
+                "operationId": "f909a31373204df98173c3befdb3ec18",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/most_sold_products": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products page data",
+                "operationId": "8f34af7866e4bcbaa51aa20370014441",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/most_viewed_products": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products page data",
+                "operationId": "c3795b5bc208fd8a5d6e2802b78297e9",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/newest_products": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products page data",
+                "operationId": "d3fac5082867e4fb0cf7c34b800c9351",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/cheapest_products": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products page data",
+                "operationId": "345e24dbff61df238eb7283a2980ea85",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/most_expensive_products": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products page data",
+                "operationId": "5736889554b97c98e87d7d031876b4c1",
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/products_by_category/{id}": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products data by category id",
+                "operationId": "405d1e219fade8f19f916b7aecf56cc4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/products_by_brand/{id}": {
+            "get": {
+                "tags": [
+                    "Products Page"
+                ],
+                "description": "get products data by category id",
+                "operationId": "47edbc06e30ed03b55a05d3afc326cc7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Its Ok",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/register": {
+            "post": {
+                "tags": [
+                    "User Api"
+                ],
+                "description": "use to signin user with recieved code",
+                "operationId": "5c468f9e0f6bb6a0779c4a3f7c0f7100",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "image": {
+                                        "description": "user image",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    },
+                                    "phone": {
+                                        "description": "user phone number",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "description": "user name",
+                                        "type": "string"
+                                    },
+                                    "address": {
+                                        "description": "user address",
+                                        "type": "string"
+                                    },
+                                    "postal_code": {
+                                        "description": "user postal code",
+                                        "type": "string"
+                                    },
+                                    "lat": {
+                                        "description": "user location latitude",
+                                        "type": "number",
+                                        "format": "double"
+                                    },
+                                    "long": {
+                                        "description": "user location longitude",
+                                        "type": "number",
+                                        "format": "double"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Data saved",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "sanctum": []
+                    }
+                ]
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Auth Api",
+            "description": "Auth Api"
+        },
+        {
+            "name": "Home Page",
+            "description": "Home Page"
+        },
+        {
+            "name": "Products Page",
+            "description": "Products Page"
+        },
+        {
+            "name": "User Api",
+            "description": "User Api"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "sanctum": {
+                "type": "apiKey",
+                "description": "Bearer",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    }
+}
